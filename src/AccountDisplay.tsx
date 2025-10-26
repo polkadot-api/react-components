@@ -32,9 +32,13 @@ export const AccountDisplay: FC<{
   copyable = true,
   maxAddrLength,
 }) => {
-  const addr = maxAddrLength
-    ? sliceMiddleStr(account.address, maxAddrLength)
-    : account.address;
+  const addr = maxAddrLength ? (
+    <span className="SplitText">
+      {sliceMiddleStr(account.address, maxAddrLength)}
+    </span>
+  ) : (
+    <SplitText>account.address</SplitText>
+  );
 
   return (
     <div
@@ -91,11 +95,11 @@ export const AccountDisplay: FC<{
                 </>
               ) : null}
             </div>
-            <SplitText>{addr}</SplitText>
+            {addr}
           </div>
         )
       ) : (
-        <SplitText>{addr}</SplitText>
+        addr
       )}
     </div>
   );

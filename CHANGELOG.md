@@ -1,3 +1,9 @@
+## 0.3.1 - 2025-10-26
+
+### Fixed
+
+- `AccountDisplay` moves the ellipsis character out of position when using `maxAddrLength`
+
 ## 0.3.0 - 2025-10-26
 
 ### Added
