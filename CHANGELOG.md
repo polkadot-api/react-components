@@ -1,3 +1,9 @@
+## 0.3.2 - 2025-10-27
+
+### Fixed
+
+- `AccountDisplay` styles not injected when building in prod mode
+
 ## 0.3.1 - 2025-10-26
 
 ### Fixed
