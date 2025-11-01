@@ -1,3 +1,9 @@
+## 0.3.3 - 2025-11-01
+
+### Fixed
+
+- `AccountDisplay` not showing the address when not setting `maxAddrLength` parameter
+
 ## 0.3.2 - 2025-10-27
 
 ### Fixed

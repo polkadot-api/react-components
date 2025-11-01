@@ -37,7 +37,7 @@ export const AccountDisplay: FC<{
       {sliceMiddleStr(account.address, maxAddrLength)}
     </span>
   ) : (
-    <SplitText>account.address</SplitText>
+    <SplitText>{account.address}</SplitText>
   );
 
   return (
