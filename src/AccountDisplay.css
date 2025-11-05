@@ -11,9 +11,14 @@
     line-height: 1;
 }
 
+.AccountDisplay .CopyText {
+    flex-shrink: 0;
+}
+
 .AccountDisplay .Identicon, .AccountDisplay_copied {
     height: calc(var(--ad-spacing) * 8);
     width: calc(var(--ad-spacing) * 8);
+    border-radius: 0.25rem;
 }
 .AccountDisplay_copied {
     display: flex;

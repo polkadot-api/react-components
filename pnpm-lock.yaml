@@ -11,6 +11,9 @@ dependencies:
   '@polkadot-api/substrate-bindings':
     specifier: ^0.16.4
     version: 0.16.4
+  blo:
+    specifier: ^2.0.0
+    version: 2.0.0
   lucide-react:
     specifier: ^0.548.0
     version: 0.548.0(react@19.1.0)
@@ -1100,6 +1103,10 @@ packages:
     resolution: {integrity: sha512-JMWsdF+O8Orq3EMukbUN1QfbLK9mX2CkUmQBcW2T0s8OmdAUL5LLM/6wFwSrqXzlXB13yhyK9gTKS1rIizOduQ==}
     hasBin: true
     dev: true
+
+  /blo@2.0.0:
+    resolution: {integrity: sha512-VUUr1+vWisNSaHVswkbPbk1+GhygClKILkGchae7nsyuJ4ZVz5l1hEW4eR5F/ly/asM5vzigYGXjPnvrd//CVg==}
+    dev: false
 
   /boolbase@1.0.0:
     resolution: {integrity: sha512-JZOSA7Mo9sNGB8+UjSgzdLtokWAky1zbztM3WRLCbZ70/3cTANmQmOdR7y2g+J0e2WXywy1yS468tY+IruqEww==}

@@ -1,3 +1,10 @@
+## 0.4.0 - 2025-11-05
+
+### Added
+
+- `EthIdenticon` component for ethereum addresses.
+- `AccountDisplay` works with ethereum addresses.
+
 ## 0.3.3 - 2025-11-01
 
 ### Fixed

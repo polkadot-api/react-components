@@ -1,12 +1,17 @@
-import { AccountId, SS58String } from "@polkadot-api/substrate-bindings";
+import {
+  AccountId,
+  HexString,
+  SS58String,
+} from "@polkadot-api/substrate-bindings";
 import { CheckCircle } from "lucide-react";
 import { FC } from "react";
 import { CopyText } from "./CopyText";
 import { PolkadotIdenticon } from "./PolkadotIdenticon";
 import "./AccountDisplay.css";
+import { EthIdenticon } from "./EthIdenticon";
 
 export type AccountInfo = {
-  address: SS58String;
+  address: SS58String | HexString;
   name?: string;
   subId?: string;
   verified?: boolean;
@@ -39,6 +44,16 @@ export const AccountDisplay: FC<{
   ) : (
     <SplitText>{account.address}</SplitText>
   );
+  const isEth = account.address.startsWith("0x");
+
+  const identicon = isEth ? (
+    <EthIdenticon address={account.address} className="Identicon" />
+  ) : (
+    <PolkadotIdenticon
+      className="Identicon"
+      publicKey={getPublicKey(account.address)}
+    />
+  );
 
   return (
     <div
@@ -54,17 +69,12 @@ export const AccountDisplay: FC<{
               <CheckCircle size={18} className="text-positive shrink-0" />
             </div>
           }
+          className={"CopyText"}
         >
-          <PolkadotIdenticon
-            className="Identicon"
-            publicKey={getPublicKey(account.address)}
-          />
+          {identicon}
         </CopyText>
       ) : (
-        <PolkadotIdenticon
-          className="Identicon"
-          publicKey={getPublicKey(account.address)}
-        />
+        identicon
       )}
       {account.name ? (
         !showAddress ? (
