@@ -66,7 +66,7 @@ export const AccountDisplay: FC<{
           text={account.address}
           copiedIndicator={
             <div className="AccountDisplay_copied">
-              <CheckCircle size={18} className="text-positive shrink-0" />
+              <CheckCircle size={18} className="verified" />
             </div>
           }
           className={"CopyText"}
@@ -90,7 +90,7 @@ export const AccountDisplay: FC<{
                 </>
               ) : null}
             </div>
-            <CheckCircle size={18} className="text-positive shrink-0" />
+            <CheckCircle size={18} className="verified" />
           </div>
         ) : (
           <div className="AccountDisplay_full-info">

@@ -15,6 +15,11 @@
     flex-shrink: 0;
 }
 
+.AccountDisplay .verified {
+    color: oklch(62.7% 0.194 149.214);
+    flex-shrink: 0;
+}
+
 .AccountDisplay .Identicon, .AccountDisplay_copied {
     height: calc(var(--ad-spacing) * 8);
     width: calc(var(--ad-spacing) * 8);

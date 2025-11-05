@@ -1,3 +1,9 @@
+## 0.4.1 - 2025-11-06
+
+### Fixed
+
+- `AccountDisplay` verified color.
+
 ## 0.4.0 - 2025-11-05
 
 ### Added
