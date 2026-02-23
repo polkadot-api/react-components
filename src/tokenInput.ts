@@ -4,7 +4,7 @@ import { TokenProperties, formatValue, localeProps } from "./tokenFormat";
 export const useTokenInput = (
   token: TokenProperties | null,
   value?: bigint | null,
-  onChange?: (value: bigint | null) => void
+  onChange?: (value: bigint | null) => void,
 ) => {
   const ref = useRef<HTMLInputElement>(null as unknown as HTMLInputElement);
 
@@ -28,7 +28,7 @@ export const useTokenInput = (
     const { value, cleaned, cursor } = parseValue(
       evt.target.value,
       token.decimals,
-      evt.target.selectionStart ?? 0
+      evt.target.selectionStart ?? 0,
     );
     evt.target.value = cleaned;
     evt.target.setSelectionRange(cursor, cursor);
@@ -80,11 +80,11 @@ export const useTokenInput = (
 function parseValue(
   strValue: string,
   decimals: number,
-  cursor: number = 0
+  cursor: number = 0,
 ): { value: bigint | null; cleaned: string; cursor: number } {
   strValue = strValue.replaceAll(
     localeProps.thousandsSeparator,
-    localeProps.fractionalSeparator
+    localeProps.fractionalSeparator,
   );
 
   const parts = strValue.split(localeProps.fractionalSeparator);

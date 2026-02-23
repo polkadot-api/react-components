@@ -11,7 +11,7 @@ export const localeProps = {
 export function formatValue(
   value: bigint,
   decimals: number,
-  withThousands = true
+  withThousands = true,
 ) {
   if (!decimals) return value.toLocaleString();
 

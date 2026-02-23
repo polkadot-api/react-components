@@ -1,3 +1,13 @@
+# Changelog
+
+## Unreleased
+
+## 0.4.2 - 2026-02-23
+
+### Fixed
+
+- Update dependencies
+
 ## 0.4.1 - 2025-11-06
 
 ### Fixed

@@ -58,7 +58,7 @@ export const AccountDisplay: FC<{
   return (
     <div
       className={["AccountDisplay", ...(className ? [className] : [])].join(
-        " "
+        " ",
       )}
     >
       {copyable ? (

@@ -107,12 +107,12 @@ const zero = blake2512(
   new Uint8Array([
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0,
-  ])
+  ]),
 );
 
 const getColors = (publicKey: Uint8Array) => {
   const id = Array.from(blake2512(publicKey)).map(
-    (x, i) => (x + 256 - zero[i]) % 256
+    (x, i) => (x + 256 - zero[i]) % 256,
   );
 
   const sat = (Math.floor((id[29] * 70) / 256 + 26) % 80) + 30;
@@ -134,7 +134,7 @@ const getColors = (publicKey: Uint8Array) => {
   const rot = (id[28] % 6) * 3;
 
   return scheme.colors.map(
-    (_, i) => palette[scheme.colors[i < 18 ? (i + rot) % 18 : 18]]
+    (_, i) => palette[scheme.colors[i < 18 ? (i + rot) % 18 : 18]],
   );
 };
 
